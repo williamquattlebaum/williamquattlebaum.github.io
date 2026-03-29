@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>William Quattlebaum — Cybersecurity Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">WQ</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#reports">IR Reports</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">SOC Analyst · Security Analyst</p>
+      <h1>William<br/>Quattlebaum</h1>
+      <p class="hero-sub">
+        Cybersecurity professional with a B.S. from Kennesaw State and M.S. in progress at WGU.
+        Builder of a self-hosted SOC lab running enterprise-grade detection — Wazuh SIEM, Suricata IDS,
+        Splunk, and TheHive on bare metal.
+      </p>
+      <div class="hero-badges">
+        <span class="badge">CompTIA Security+</span>
+        <span class="badge">Google Cybersecurity</span>
+        <span class="badge">Network+ (in progress)</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio" target="_blank" class="btn btn-primary">View Portfolio Repo</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">soc-lab ~ status</span>
+      </div>
+      <div class="terminal-body">
+        <p><span class="prompt">$</span> systemctl is-active wazuh-manager</p>
+        <p class="out-green">active</p>
+        <p><span class="prompt">$</span> systemctl is-active suricata</p>
+        <p class="out-green">active</p>
+        <p><span class="prompt">$</span> cat /var/log/wazuh/alerts | wc -l</p>
+        <p class="out-green">200,000+ events logged</p>
+        <p><span class="prompt">$</span> echo "Lab status: OPERATIONAL"</p>
+        <p class="out-green">Lab status: OPERATIONAL</p>
+        <p class="cursor-line"><span class="prompt">$</span> <span class="cursor">█</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a cybersecurity professional pivoting into my first SOC Analyst role after building
+            hands-on experience the hard way — standing up a real home lab from scratch and breaking
+            (then fixing) things in a controlled environment.
+          </p>
+          <p>
+            My lab runs on a Dell OptiPlex 7010 with Proxmox managing 4 VMs: a Wazuh all-in-one SIEM,
+            a Windows 10 endpoint (enrolled as an agent), a Kali Linux attacker, and a Splunk instance.
+            I've run red team simulations, documented incident reports, and mapped findings to MITRE ATT&amp;CK.
+          </p>
+          <p>
+            I hold a B.S. in Cybersecurity from Kennesaw State University and am completing my M.S. in
+            Cybersecurity &amp; Information Assurance at WGU. I'm Security+ certified and actively studying for Network+.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Incident Reports</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">48K+</span>
+            <span class="stat-label">Suricata Rules Active</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">200K+</span>
+            <span class="stat-label">Wazuh Events Logged</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">51%</span>
+            <span class="stat-label">CIS Benchmark Score</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>SIEM &amp; Detection</h3>
+          <ul>
+            <li>Wazuh 4.11 (Manager, Indexer, Dashboard)</li>
+            <li>Splunk 9.3 (HEC, dashboards, SPL)</li>
+            <li>Suricata 7.0 IDS (48,786 active rules)</li>
+            <li>Alert correlation &amp; SCA</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Threat &amp; Incident Response</h3>
+          <ul>
+            <li>MITRE ATT&amp;CK framework</li>
+            <li>TheHive 5.3 case management</li>
+            <li>Incident report authoring</li>
+            <li>IOC identification &amp; triage</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Red Team / Pen Test</h3>
+          <ul>
+            <li>Kali Linux</li>
+            <li>Nmap (SYN scan, OS fingerprint, vuln scan)</li>
+            <li>Hydra (brute force simulation)</li>
+            <li>SMB enumeration, WinRM exposure</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Compliance &amp; Hardening</h3>
+          <ul>
+            <li>CIS Benchmarks (Windows 10 v1.12.0)</li>
+            <li>HIPAA, PCI-DSS v4.0, NIST 800-53</li>
+            <li>PowerShell remediation scripting</li>
+            <li>Group Policy &amp; Windows hardening</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Infrastructure</h3>
+          <ul>
+            <li>Proxmox VE 9.0 hypervisor</li>
+            <li>Ubuntu 22.04, Windows 10/Server</li>
+            <li>Docker (TheHive + Cassandra + ES)</li>
+            <li>SSH key management, cloud-init</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Scripting &amp; Automation</h3>
+          <ul>
+            <li>PowerShell, Bash, Python</li>
+            <li>Git &amp; GitHub</li>
+            <li>AI-assisted SOC automation</li>
+            <li>Cron scheduling &amp; alerting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag">SIEM / IDS</span>
+            <span class="project-date">March 2026</span>
+          </div>
+          <h3>Home SOC Lab — Wazuh + Suricata</h3>
+          <p>Designed and deployed a fully functional SOC on a Dell OptiPlex 7010 (Proxmox, 32GB RAM). Wazuh all-in-one stack with Windows 10 endpoint enrolled as Agent ID 001. Suricata 7.0 monitoring all VM-to-VM traffic at the vmbr0 bridge — defense-in-depth with 48,786 active detection rules.</p>
+          <div class="project-tags">
+            <span>Proxmox</span><span>Wazuh</span><span>Suricata</span><span>Ubuntu</span><span>Windows 10</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag red">Red Team</span>
+            <span class="project-date">March 2026</span>
+          </div>
+          <h3>Red Team Simulation &amp; Detection Validation</h3>
+          <p>Controlled attack simulation: Kali Linux vs Windows 10 endpoint. Multi-phase attack including TCP SYN scan (65,535 ports), OS fingerprinting, aggressive SMB enumeration, and WinRM exposure. Suricata fired 28 real-time alerts. Findings mapped to 5 MITRE ATT&amp;CK techniques.</p>
+          <div class="project-tags">
+            <span>Kali Linux</span><span>Nmap</span><span>MITRE ATT&CK</span><span>Suricata</span>
+          </div>
+          <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/blob/main/incident-reports/003-kali-attack-simulation.md" target="_blank" class="project-link">View IR-003 →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag yellow">Compliance</span>
+            <span class="project-date">March 2026</span>
+          </div>
+          <h3>CIS Benchmark Remediation</h3>
+          <p>Assessed Windows 10 against CIS v1.12.0 via Wazuh SCA — baseline score 32%. Built and executed a PowerShell remediation script targeting 100+ controls: audit policy, account lockout, service hardening, firewall logging, NTLMv2 enforcement, SMBv1 disabled. Score improved to 51%+ and climbing.</p>
+          <div class="project-tags">
+            <span>PowerShell</span><span>CIS Benchmarks</span><span>Wazuh SCA</span><span>Windows 10</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag purple">SOC Pipeline</span>
+            <span class="project-date">March 2026</span>
+          </div>
+          <h3>Full SOC Pipeline — Wazuh → Splunk → TheHive</h3>
+          <p>End-to-end SOC pipeline: Wazuh alerts forwarded to Splunk via custom HEC integration (200K+ events). TheHive 5.3 deployed in Docker for case management. Simulated WinRM brute force attack — multi-phase recon detected, case created, documented as IR-005.</p>
+          <div class="project-tags">
+            <span>Splunk</span><span>TheHive</span><span>Wazuh</span><span>Docker</span>
+          </div>
+          <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/blob/main/incident-reports/IR-005.md" target="_blank" class="project-link">View IR-005 →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag blue">Academic</span>
+            <span class="project-date">March 2026</span>
+          </div>
+          <h3>Corporate Network Security Merger Proposal</h3>
+          <p>WGU academic project: designed a secure merged network for two companies. 4 segmented VLANs, Zero Trust + Defense-in-Depth architecture. Recommended FortiGate NGFW, Azure Sentinel SIEM, Cisco Umbrella. Mapped to HIPAA and PCI-DSS v4.0 compliance requirements.</p>
+          <div class="project-tags">
+            <span>FortiGate</span><span>Azure Sentinel</span><span>HIPAA</span><span>PCI-DSS</span><span>Zero Trust</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag green">Automation</span>
+            <span class="project-date">March 2026</span>
+          </div>
+          <h3>AI-Assisted SOC Automation</h3>
+          <p>Deployed an AI agent (OpenClaw + Claude) inside a Proxmox LXC container as an always-on SOC assistant. Automates VM health monitoring, Wazuh service checks, incident report generation, and GitHub publishing. Proactive Telegram alerting on service failures.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Bash</span><span>AI/LLM</span><span>Proxmox</span><span>Automation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INCIDENT REPORTS -->
+  <section id="reports" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Incident Reports</h2>
+      <p class="section-sub">Documented findings from the home SOC lab — written in professional IR format.</p>
+      <div class="ir-table">
+        <div class="ir-row ir-header">
+          <span>ID</span>
+          <span>Title</span>
+          <span>Severity</span>
+          <span>Outcome</span>
+          <span></span>
+        </div>
+        <div class="ir-row">
+          <span class="ir-id">IR-001</span>
+          <span>CIS Benchmark Compliance Gap — Windows 10 at 32%</span>
+          <span class="sev-medium">Medium</span>
+          <span>Remediation in progress → 51%+</span>
+          <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/blob/main/incident-reports/001-cis-benchmark-finding.md" target="_blank">View →</a>
+        </div>
+        <div class="ir-row">
+          <span class="ir-id">IR-002</span>
+          <span>Network Recon: 0 Alerts with Firewall ON</span>
+          <span class="sev-high">High</span>
+          <span>Identified SIEM detection gap</span>
+          <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/blob/main/incident-reports/002-network-reconnaissance.md" target="_blank">View →</a>
+        </div>
+        <div class="ir-row">
+          <span class="ir-id">IR-003</span>
+          <span>Kali Red Team: 28 Suricata Alerts, 15 Open Ports</span>
+          <span class="sev-high">High</span>
+          <span>Detection gap closed, ATT&CK mapped</span>
+          <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/blob/main/incident-reports/003-kali-attack-simulation.md" target="_blank">View →</a>
+        </div>
+        <div class="ir-row">
+          <span class="ir-id">IR-004</span>
+          <span>Suricata Deployment &amp; Network-Layer Validation</span>
+          <span class="sev-medium">Medium</span>
+          <span>Full IDS integration documented</span>
+          <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/blob/main/incident-reports/004-suricata-deployment.md" target="_blank">View →</a>
+        </div>
+        <div class="ir-row">
+          <span class="ir-id">IR-005</span>
+          <span>WinRM Brute Force &amp; Multi-Phase Recon — Full SOC Pipeline</span>
+          <span class="sev-high">High</span>
+          <span>End-to-end pipeline validated</span>
+          <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/blob/main/incident-reports/IR-005.md" target="_blank">View →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Open to SOC Analyst and Security Analyst roles — entry-level and junior positions welcome.</p>
+      <div class="contact-links">
+        <a href="mailto:williamquattlebaum@gmail.com" class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <span>williamquattlebaum@gmail.com</span>
+        </a>
+        <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio" target="_blank" class="contact-card">
+          <span class="contact-icon">🐙</span>
+          <span>github.com/williamquattlebaum</span>
+        </a>
+        <a href="tel:7708260832" class="contact-card">
+          <span class="contact-icon">📞</span>
+          <span>770-826-0832</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 William Quattlebaum · Cybersecurity Analyst · Atlanta, GA</p>
+  </footer>
+
+</body>
+</html>
