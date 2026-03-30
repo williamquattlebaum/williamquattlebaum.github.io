@@ -55,8 +55,8 @@
         <p class="out-green">active</p>
         <p><span class="prompt">$</span> systemctl is-active suricata</p>
         <p class="out-green">active</p>
-        <p><span class="prompt">$</span> cat /var/log/wazuh/alerts | wc -l</p>
-        <p class="out-green">200,000+ events logged</p>
+        <p><span class="prompt">$</span> python3 scripts/socdesk.py --status</p>
+        <p class="out-green">6 VMs up | 216K+ IDS hits | 6 IRs logged</p>
         <p><span class="prompt">$</span> echo "Lab status: OPERATIONAL"</p>
         <p class="out-green">Lab status: OPERATIONAL</p>
         <p class="cursor-line"><span class="prompt">$</span> <span class="cursor">█</span></p>
@@ -76,9 +76,10 @@
             (then fixing) things in a controlled environment.
           </p>
           <p>
-            My lab runs on a Dell OptiPlex 7010 with Proxmox managing 4 VMs: a Wazuh all-in-one SIEM,
-            a Windows 10 endpoint (enrolled as an agent), a Kali Linux attacker, and a Splunk instance.
-            I've run red team simulations, documented incident reports, and mapped findings to MITRE ATT&amp;CK.
+            My lab runs on a Dell OptiPlex 7010 (32GB RAM) with Proxmox managing 6 VMs: Wazuh SIEM,
+            Splunk, TheHive, Windows 10 endpoint, Kali Linux attacker, and an AI agent container.
+            I've run red team simulations, built custom detection tooling in Python, documented 6 incident
+            reports, and mapped all findings to MITRE ATT&amp;CK.
           </p>
           <p>
             I hold a B.S. in Cybersecurity from Kennesaw State University and am completing my M.S. in
@@ -87,7 +88,7 @@
         </div>
         <div class="about-stats">
           <div class="stat-card">
-            <span class="stat-num">5</span>
+            <span class="stat-num">6</span>
             <span class="stat-label">Incident Reports</span>
           </div>
           <div class="stat-card">
@@ -95,8 +96,8 @@
             <span class="stat-label">Suricata Rules Active</span>
           </div>
           <div class="stat-card">
-            <span class="stat-num">200K+</span>
-            <span class="stat-label">Wazuh Events Logged</span>
+            <span class="stat-num">216K+</span>
+            <span class="stat-label">Suricata Alerts Fired</span>
           </div>
           <div class="stat-card">
             <span class="stat-num">51%</span>
@@ -250,6 +251,19 @@
           </div>
         </div>
 
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag red">Tooling</span>
+            <span class="project-date">March 2026</span>
+          </div>
+          <h3>Custom SOC Tooling Suite</h3>
+          <p>Built a suite of Python tools: <strong>SOC Desk</strong> — fullscreen TUI combining VM status, Wazuh alert feed, and a live ASCII world attack map with IP geolocation. <strong>Chaos Mode</strong> — automated red team simulator with 9 MITRE-mapped scenarios (Kali → Windows, runs 3x/week). <strong>IR Generator</strong> — clusters Wazuh alerts by time window + technique and auto-writes professional incident reports.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Textual</span><span>MITRE ATT&amp;CK</span><span>Suricata</span><span>Wazuh</span>
+          </div>
+          <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/tree/main/scripts" target="_blank" class="project-link">View Scripts →</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -302,6 +316,13 @@
           <span>End-to-end pipeline validated</span>
           <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/blob/main/incident-reports/IR-005.md" target="_blank">View →</a>
         </div>
+        <div class="ir-row">
+          <span class="ir-id">IR-006</span>
+          <span>Disk Exhaustion Event — Wazuh Server Storage at 100%</span>
+          <span class="sev-medium">Medium</span>
+          <span>Disk expanded 40→60GB, auto-purge configured</span>
+          <a href="https://github.com/williamquattlebaum/cybersecurity-portfolio/blob/main/incident-reports/IR-006.md" target="_blank">View →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -329,7 +350,7 @@
   </section>
 
   <footer>
-    <p>© 2026 William Quattlebaum · Cybersecurity Analyst · Atlanta, GA</p>
+    <p>© 2026 William Quattlebaum · Cybersecurity Analyst · Atlanta, GA · Last updated March 30, 2026</p>
   </footer>
 
 </body>
